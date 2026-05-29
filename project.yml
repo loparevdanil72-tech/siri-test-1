@@ -1,0 +1,35 @@
+name: SiriTestApp
+options:
+  bundleIdPrefix: com.siritest
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    DEVELOPMENT_TEAM: ""   # ← Замени на свой Apple Developer Team ID
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  SiriTestApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: SiriTestApp
+        excludes:
+          - "**/*.md"
+    info:
+      path: SiriTestApp/Resources/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.siritest.SiriTestApp
+        INFOPLIST_FILE: SiriTestApp/Resources/Info.plist
+        CODE_SIGN_STYLE: Automatic
+    # App Intents requires no extra capabilities — just the framework import
+    # For physical device testing add the Siri capability:
+    # entitlements:
+    #   path: SiriTestApp/SiriTestApp.entitlements
