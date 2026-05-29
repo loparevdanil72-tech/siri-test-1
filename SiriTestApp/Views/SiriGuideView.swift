@@ -48,6 +48,16 @@ struct SiriGuideView: View {
                     ]
                 )
 
+                siriCommandsSection(
+                    title: "Telegram",
+                    icon: "paperplane.fill",
+                    commands: [
+                        ("Отправь сообщение Васе в Telegram", "Отправляет без открытия Telegram"),
+                        ("Напиши Маше в Telegram", "Siri спросит текст сообщения"),
+                        ("Send Telegram message to John", "Works in English too"),
+                    ]
+                )
+
                 Section("Добавить в Shortcuts") {
                     SiriShortcutButtonsView()
                 }

@@ -82,5 +82,18 @@ struct SiriTestAppShortcuts: AppShortcutsProvider {
             shortTitle: "Reminder Count",
             systemImageName: "checklist"
         )
+
+        // Send Telegram message — main feature
+        AppShortcut(
+            intent: SendTelegramMessageIntent(),
+            phrases: [
+                "Отправь сообщение \(\.$contact) в Telegram",
+                "Напиши \(\.$contact) в Telegram",
+                "Send Telegram message to \(\.$contact)",
+                "Message \(\.$contact) in Telegram",
+            ],
+            shortTitle: "Send Telegram",
+            systemImageName: "paperplane.fill"
+        )
     }
 }

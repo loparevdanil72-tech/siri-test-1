@@ -18,6 +18,10 @@ struct ContentView: View {
                 .tabItem { Label("Search", systemImage: "magnifyingglass") }
                 .tag(AppSection.search)
 
+            TelegramSetupView()
+                .tabItem { Label("Telegram", systemImage: "paperplane.fill") }
+                .tag(AppSection.maps)
+
             SiriGuideView()
                 .tabItem { Label("Siri", systemImage: "waveform") }
                 .tag(AppSection.settings)
